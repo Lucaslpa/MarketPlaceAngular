@@ -1,0 +1,32 @@
+.selectProduct { 
+    width: 200px;
+    height: 420px;
+    border-radius: 4px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 1px 2px 10px 0.5px rgba(0, 0, 0, 0.13);
+    transition: 0.2s;
+    margin:  0 15px;
+}
+.selectProduct:hover { 
+    box-shadow: 1px 2px 10px 0.5px rgba(0, 0, 0, 0.24);
+    transform: scale(1.02);
+}
+.selectProduct-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+.selectProduct-image { 
+    width: 100%;
+}
+.selectProduct-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+.selectProduct-description { 
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+}

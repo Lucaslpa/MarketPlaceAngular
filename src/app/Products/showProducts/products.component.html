@@ -1,0 +1,12 @@
+<div class="container" >
+    <span class="title" >As melhores ofertas</span>
+    <div class="products" >
+        <div *ngFor="let product of products">
+            <app-selectProduct 
+            [product]="product" 
+            [accessKey]="product.id" 
+            (productSelected)="onSelectProduct($event)"
+            ></app-selectProduct>
+        </div>
+    </div>
+</div>

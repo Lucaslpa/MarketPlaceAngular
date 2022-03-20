@@ -1,0 +1,6 @@
+<div class="selectProduct" (click)="onSelectProduct()"  >
+    <h1 class="selectProduct-title" >{{product.name}}</h1>
+    <img class="selectProduct-image" [src]="product.img" />
+    <strong class="selectProduct-price" >R$ {{product.price}}</strong>
+    <p class='selectProduct-description' >{{product.description.slice(0, 200)}}...</p>
+</div>
