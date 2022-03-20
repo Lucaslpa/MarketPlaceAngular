@@ -4,13 +4,14 @@
     border-radius: 4px;
     padding: 20px;
     cursor: pointer;
-    box-shadow: 1px 2px 10px 0.5px rgba(0, 0, 0, 0.13);
-    transition: 0.2s;
+    -webkit-box-shadow: 2px 3px 24px -1px rgba(115,115,115,0.27); 
+    box-shadow: 2px 3px 24px -1px rgba(115,115,115,0.27);
+    transition: 0.3s;
     margin:  0 15px;
 }
 .selectProduct:hover { 
-    box-shadow: 1px 2px 10px 0.5px rgba(0, 0, 0, 0.24);
-    transform: scale(1.02);
+    -webkit-box-shadow: 2px 3px 24px -1px rgba(36,36,36,0.27); 
+    box-shadow: 2px 3px 24px -1px rgba(36,36,36,0.27);
 }
 .selectProduct-title {
     font-size: 20px;
