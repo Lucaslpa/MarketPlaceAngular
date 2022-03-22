@@ -1,0 +1,53 @@
+.Input { 
+    width: 100%;
+    margin: 3px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.Input label { 
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.Input input { 
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.Form { 
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+.Submit-Button { 
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+    background-color: rgb(0, 153, 255);
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.Submit-Button:hover { 
+   background-color: rgb(7, 116, 189);
+}
+
+.navigate { 
+    color: black;
+    text-decoration: none;
+    margin:  10px 0 ;
+}

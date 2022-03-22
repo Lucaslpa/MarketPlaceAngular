@@ -1,6 +1,8 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { RouterLink, RouterModule } from "@angular/router";
+import { TemplateModule } from "../navegacao/template.module";
+import { ProductsRoutingModule } from "./products-routing.module";
+import { ProductsHomeComponent } from "./products.component";
 import { SelectProductComponent } from "./selectProduct/selectProduct.component";
 import {ProductComponent} from './showProduct/product.component'
 import { ProductsComponent } from "./showProducts/products.component";
@@ -9,16 +11,19 @@ import { ProductsComponent } from "./showProducts/products.component";
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule
+        ProductsRoutingModule,
+        TemplateModule
     ],
     exports: [
         ProductComponent, 
-        ProductsComponent
+        ProductsComponent,
+        ProductsHomeComponent
     ],
     declarations: [
         ProductComponent, 
         ProductsComponent,
-        SelectProductComponent
+        SelectProductComponent, 
+        ProductsHomeComponent
     ],
     providers: [],
 })

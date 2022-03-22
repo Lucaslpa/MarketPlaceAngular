@@ -1,6 +1,6 @@
-<div class="container" >
+<div class="container"  >
     <span class="title" >As melhores ofertas</span>
-    <div class="products" >
+    <div class="products" *ngIf="products$ | async as products; else loadingOrError"  >
         <div *ngFor="let product of products">
             <app-selectProduct 
             [product]="product" 
@@ -9,4 +9,12 @@
             ></app-selectProduct>
         </div>
     </div>
+    <ng-template #loadingOrError>
+      <div *ngIf="loadingError$ | async; else loading">
+       Alguma coisa de errado aconteceu
+      </div>
+      <ng-template #loading>
+        Carregando...
+     </ng-template>
+  </ng-template>
 </div>

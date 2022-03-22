@@ -1,11 +1,19 @@
 <div class="container" >
-    <div  class="wrapper" >
-        <img class="product-image" [src]="product.img" />
-        <div class="product-info" > 
-            <h1>{{product.name}}</h1>
-            <strong class="product-price" >R$ {{product.price}}</strong>
-            <p class='product-description' >{{product.description}}</p>
-            <button class="product-buy" >Comprar produto</button>
-        </div>
+    <div  class="wrapper" *ngIf="product$ | async as product; else LoadingError"   >
+            <img class="product-image" [src]="product.img" />
+            <div class="product-info" > 
+                <h1>{{product.name}}</h1>
+                <strong class="product-price" >R$ {{product.price}}</strong>
+                <p class='product-description' >{{product.description}}</p>
+                <button class="product-buy" >Comprar produto</button>
+            </div>
     </div>
+    <ng-template #LoadingError>
+        <div *ngIf="loadingError$ | async; else loading">
+            Alguma coisa de errado aconteceu
+        </div>
+        <ng-template #loading>
+            Carregando...
+         </ng-template>
+    </ng-template>
 </div>
