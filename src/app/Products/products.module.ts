@@ -1,3 +1,4 @@
+import { CartComponent } from './../cart/cart.component';
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { TemplateModule } from "../navegacao/template.module";
@@ -23,7 +24,8 @@ import { ProductsComponent } from "./showProducts/products.component";
         ProductComponent, 
         ProductsComponent,
         SelectProductComponent, 
-        ProductsHomeComponent
+        ProductsHomeComponent,
+        CartComponent
     ],
     providers: [],
 })

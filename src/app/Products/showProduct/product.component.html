@@ -4,8 +4,15 @@
             <div class="product-info" > 
                 <h1>{{product.name}}</h1>
                 <strong class="product-price" >R$ {{product.price}}</strong>
+                <strong class="product-price" >Quantidade: {{product.quantity}}</strong>
                 <p class='product-description' >{{product.description}}</p>
-                <button class="product-buy" >Comprar produto</button>
+                <div *ngIf="product.quantity" >
+                    <button class="product-buy" (click)="buyProduct(product)" >Comprar produto</button>
+                    <button class="product-buy" >Adicionar ao carrinho</button>
+                </div>
+                <div *ngIf="!product.quantity" >
+                    <button class="product-buy" >Produto esgotado</button>
+                </div>
             </div>
     </div>
     <ng-template #LoadingError>

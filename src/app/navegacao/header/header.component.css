@@ -16,3 +16,14 @@
         color: #000;
         text-decoration: none;
 }
+
+.NameLogout { 
+        width: auto;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+}
+
+.NameLogout * { 
+        margin-left: 15px;
+}

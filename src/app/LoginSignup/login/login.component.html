@@ -1,13 +1,13 @@
 <form  [formGroup]="LoginForm" class="Form"  >
      <div  class="Input" >
-        <label for="login"  >Login</label>
-        <input formControlName="login" type="text" name="login" />
+        <label for="username"  >Username</label>
+        <input formControlName="login" type="text" name="username" />
      </div> 
     <div class="Input">
             <label for="senha" >Senha</label>
             <input formControlName="password" type="password" name="senha" />
     </div>
-    <button [disabled]="!LoginForm.valid" class="Submit-Button" (click)="onLogin()"  >Fazer login</button>
+    <button  type="submit" class="Submit-Button" (click)="onLogin($event)"  >Fazer login</button>
     <a class="navigate" routerLink="/Enter/Signup" >Registrar-se</a>
     <a class="navigate" routerLink="/" >Voltar</a>
 </form>

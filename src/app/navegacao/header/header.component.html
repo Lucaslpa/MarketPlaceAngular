@@ -1,4 +1,12 @@
 <header class="Header" >
      <h1 routerLink="/" style="cursor: pointer;" >Mercado dibre</h1>
-     <a routerLink="/Enter" >Entre</a>
+     <div class="NameLogout" *ngIf="userName" >
+          <strong routerLink="/Cart">CART</strong> 
+          <span>{{userName}}</span> 
+          <a (click)="logout()" >Sair</a> 
+     </div>
+     <div class="NameLogout" *ngIf="!userName" >
+          <span routerLink="/Cart">CART</span> 
+          <a  routerLink="/Enter" >Entre</a> 
+     </div>
 </header>
