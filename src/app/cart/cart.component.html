@@ -1,14 +1,21 @@
 <div class="container" >
     <div class="wrapper"> 
-        <div class="Product" *ngFor="let item of Products" >
-            <img [src]="item.img" />
+        <div class="Product" *ngFor="let item of Products; else " >
+            <div class="img-background">
+                <img [src]="item.img"  />
+            </div>
             <span>{{item.name}}</span>
             <strong>{{item.price}}</strong>
-            <input type="number" [defaultValue]="0" [min]="0" [max]="item.quantity"  />
+            <input type="number" [defaultValue]="item.buyQuantity" [min]="1" [max]="item.quantity" [value]="item.buyQuantity" (change)="onChangeBuyQuantity(item, $event)"   />
+            <button class="button-remove" (click)="removeProduct(item)" >X</button>
         </div>
-
+        <div 
+        *ngIf="Products.length == 0" 
+        > 
+             <strong>Sem itens no carrinho</strong>
+        </div>
         <div class="button-container" > 
-            <button class="product-buy" > Comprar produtos </button>
+            <button class="product-buy" (click)="buyProducts()" > Comprar produtos </button>
         </div>
     </div>
 </div>

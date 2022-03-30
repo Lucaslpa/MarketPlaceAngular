@@ -7,6 +7,7 @@ import { ProductsHomeComponent } from "./products.component";
 import { SelectProductComponent } from "./selectProduct/selectProduct.component";
 import {ProductComponent} from './showProduct/product.component'
 import { ProductsComponent } from "./showProducts/products.component";
+import { CartService } from '../services/cart.service';
 
 
 @NgModule({
@@ -27,6 +28,8 @@ import { ProductsComponent } from "./showProducts/products.component";
         ProductsHomeComponent,
         CartComponent
     ],
-    providers: [],
+    providers: [
+        CartService
+    ],
 })
 export class ProductsModule { }

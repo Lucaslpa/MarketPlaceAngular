@@ -25,14 +25,4 @@ export class ProductsService {
       responseType: 'json'
     });
   }
-
-  addToCart(product: Product) {
-    const oldCard: Product[] = JSON.parse(localStorage.getItem('cart') || `[]`);
-    localStorage.setItem('cart', JSON.stringify([product, ...oldCard]));
-  } 
-
-  removeFromCart(product: Product) {
-    const oldCard: Product[] = JSON.parse(localStorage.getItem('cart') || `[]`);
-    localStorage.setItem('cart', JSON.stringify(oldCard.filter(p => p.id !== product.id)));
-  }
 }

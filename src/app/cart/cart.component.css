@@ -38,14 +38,27 @@
     display: flex;
     align-items: center;
     margin-top: 10px ;
+    position: relative;
 }
 .Product * { 
      margin-left: 10px;
 }
 
+.img-background { 
+    width: 100%;
+    max-width: 50px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
 .Product img {  
     width: 100%;
     max-width: 50px;
+    margin: 0;
+
 }
 
 .Product strong { 
@@ -55,6 +68,20 @@
 }
 
 .Product input { 
-     padding:  10px;
-     
+     padding:  10px;    
+}
+.button-remove { 
+     padding: 10px;
+     background-color: rgb(218, 216, 216);
+     color: rgb(0, 0, 0);
+     font-weight: bold;
+     border: none;
+     position: absolute;
+     right: 5%;
+     cursor: pointer;
+
+}
+
+.button-remove:active { 
+    background-color: rgb(198, 216, 221);
 }

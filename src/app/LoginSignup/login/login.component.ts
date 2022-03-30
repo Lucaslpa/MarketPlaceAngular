@@ -22,6 +22,7 @@ export class LoginComponent {
 
     onLogin(event: MouseEvent) { 
         event.preventDefault();
+        const returnURL = this.Router.parseUrl(this.Router.url).queryParams['returnUrl']
        const formIsInvalid = !this.LoginForm.valid
       if(formIsInvalid) {
         Swal.fire({
@@ -44,7 +45,7 @@ export class LoginComponent {
                 return err;
             } )).subscribe(allowedLogin => {
            if(allowedLogin) { 
-                this.Router.navigate(['/']).then( () => {
+                this.Router.navigate([returnURL || '/']).then( () => {
                     sub.unsubscribe();
                 });
            } else {
