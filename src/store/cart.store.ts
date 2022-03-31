@@ -6,19 +6,20 @@ import { ProductCart } from 'src/models/product';
 @Injectable({
      providedIn: 'root'
 })
-class CartStore {
+export class CartStore { 
+       constructor() { 
+           this.updateCart()
+       }
+
      private CartState = new BehaviorSubject<ProductCart[]>([]);
 
-
+ 
         getCart() {
             return this.CartState.asObservable();
         }
 
-        addToCart(product: ProductCart) {
-            const oldCard: ProductCart[] = JSON.parse(localStorage.getItem('cart') || `[]`);
-            const finded =  oldCard.find(p => p.id === product.id) 
-            if(finded) return false
-            localStorage.setItem('cart', JSON.stringify([product, ...oldCard]));
-            return true;
+        updateCart() {
+            const cart = JSON.parse(localStorage.getItem('cart') || `[]`)
+            this.CartState.next(cart);
         }
 }

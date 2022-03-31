@@ -7,6 +7,9 @@
      height: 10%;
      width: 100%;
 }
+
+
+
 .Header h1 { 
         font-size: 20px;
         font-weight: bold;
@@ -15,6 +18,25 @@
 .Header a { 
         color: #000;
         text-decoration: none;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+}
+.MenuContainer { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        height: 100%;
+}
+.Menu {
+        display: flex; 
+        list-style: none;
+}
+
+.Menu-link  { 
+  margin:  0 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .NameLogout { 
@@ -26,4 +48,11 @@
 
 .NameLogout * { 
         margin-left: 15px;
+}
+
+.UserName { 
+        text-decoration: underline;
+        font-weight: bold;
+        color: rgb(25, 154, 240);
+        margin-left: 50px;
 }

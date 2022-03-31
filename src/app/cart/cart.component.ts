@@ -3,9 +3,10 @@ import Swal from 'sweetalert2';
 import { ProductsService } from './../services/products.service';
 import { Observable, Subscription } from 'rxjs';
 import { Product, ProductCart } from './../../models/product';
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { CartService } from '../services/cart.service';
 import { Router } from '@angular/router';
+import { CartStore } from 'src/store/cart.store';
 
 
 type ProductCard = { 
@@ -18,19 +19,29 @@ type ProductCard = {
     templateUrl: "./cart.component.html",
     styleUrls: ["./cart.component.css"]
 })
-export class CartComponent implements OnInit {
+export class CartComponent implements OnInit, OnDestroy {
 
    constructor(
        private CartService: CartService, 
        private ProductsService: ProductsService,
        private UserService: UserService,
+       private CartStore: CartStore, 
    ) { }
 
     Products: ProductCart[] = [];
- 
+    subs: Subscription[] = [];
 
     ngOnInit(): void {
-      this.Products  = this.CartService.getAllProductsFromCart()
+        const sub   =  this.CartStore.getCart().subscribe(
+            (products: ProductCart[]) => {
+                this.Products = products
+            }
+        )
+        this.subs.push(sub)
+    }
+
+    ngOnDestroy(): void {
+        this.subs.forEach(element => {element.unsubscribe()})
     }
 
     onChangeBuyQuantity(product: ProductCart, event: Event) {
@@ -45,7 +56,7 @@ export class CartComponent implements OnInit {
 
     buyProducts() {
        if(!this.UserService.isLogged()) return 
-       if(this.Products.length == 0)  {
+       if(!this.Products.length)  {
         Swal.fire({
             icon: 'warning',
             title: 'Não há produtos no carrinho!',
@@ -73,12 +84,14 @@ export class CartComponent implements OnInit {
             icon: 'success',
             confirmButtonText: 'Ok'
             }).then(() => {
-                subs.forEach(element => {element.unsubscribe()})}
+                subs.forEach(element => {
+                    this.CartStore.updateCart()
+                    element.unsubscribe()})}
             )
-            
     }
  
     removeProduct(product: ProductCart) {
         this.CartService.removeFromCart(product)
+        this.CartStore.updateCart()
     }
 } 

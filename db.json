@@ -32,67 +32,67 @@
   "products": [
     {
       "id": 1,
-      "price": 200,
-      "name": "Product 1",
+      "price": 430,
+      "name": "Câmera HD",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "quantity": 0,
-      "img": "https://i.zst.com.br/thumbs/12/4/11/1515023556.jpg"
+      "quantity": 29,
+      "img": "https://m.media-amazon.com/images/I/514KMZ76PVL._AC_SY450_.jpg"
     },
     {
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "id": 2,
-      "img": "https://i.zst.com.br/thumbs/12/4/11/1515023556.jpg",
-      "name": "Product 2",
-      "price": 300,
-      "quantity": 8
+      "img": "https://images-shoptime.b2w.io/produtos/01/00/img/1838061/0/1838061085_1GG.jpg",
+      "name": "Playstation 5",
+      "price": 4898,
+      "quantity": 5
     },
     {
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "id": 3,
-      "img": "https://i.zst.com.br/thumbs/12/4/11/1515023556.jpg",
-      "name": "Product 3",
-      "price": 400,
-      "quantity": 14
+      "img": "https://images-americanas.b2w.io/produtos/01/00/img/1614132/3/1614132366_1GG.jpg",
+      "name": "Iphone 11",
+      "price": 4000,
+      "quantity": 11
     },
     {
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "id": 4,
-      "img": "https://i.zst.com.br/thumbs/12/4/11/1515023556.jpg",
-      "name": "Product 4",
-      "price": 500,
-      "quantity": 0
+      "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pink-select-2021?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1645572315935",
+      "name": "Iphone 13 rosa",
+      "price": 9000,
+      "quantity": 18
     },
     {
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "id": 5,
-      "img": "https://i.zst.com.br/thumbs/12/4/11/1515023556.jpg",
-      "name": "Product 3",
-      "price": 400,
+      "img": "https://images-americanas.b2w.io/produtos/01/00/img/4120059/4/4120059411_1GG.jpg",
+      "name": "Nootbook",
+      "price": 2700,
       "quantity": 12
     },
     {
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "id": 6,
-      "img": "https://i.zst.com.br/thumbs/12/4/11/1515023556.jpg",
-      "name": "Product 3",
-      "price": 400,
-      "quantity": 14
+      "img": "https://a-static.mlcdn.com.br/618x463/calca-jeans-feminina-jogger-cos-elastico-blogueira-jog01-opa-linda/opalinda/7941000535/f4f210c8f55374466b21a1889be8f2b1.jpg",
+      "name": "Calça jeans",
+      "price": 120,
+      "quantity": 8
     },
     {
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "id": 7,
-      "img": "https://i.zst.com.br/thumbs/12/4/11/1515023556.jpg",
-      "name": "Product 3",
-      "price": 400,
+      "img": "https://www.directdtg.com.br/658-large_default/camiseta-raglan-personalizada.jpg",
+      "name": "Camiseta X",
+      "price": 100,
       "quantity": 14
     },
     {
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "id": 8,
-      "img": "https://i.zst.com.br/thumbs/12/4/11/1515023556.jpg",
-      "name": "Product 3",
-      "price": 400,
-      "quantity": 13
+      "img": "https://br.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-camiseta-cl%C3%A1ssica-ready-to-wear--HAY50WJC8702_PM2_Front%20view.jpg",
+      "name": "Camiseta preta",
+      "price": 60,
+      "quantity": 50
     }
   ],
   "purchase": [
@@ -101,8 +101,6 @@
       "user_id": 1,
       "product_id": 1,
       "quantity": 1,
-      "productr_value": 200,
-      "total_value": 200,
       "date": "2020-01-01"
     },
     {
@@ -110,8 +108,6 @@
       "user_id": 1,
       "product_id": 2,
       "quantity": 2,
-      "productr_value": 300,
-      "total_value": 600,
       "date": "2020-01-01"
     }
   ]

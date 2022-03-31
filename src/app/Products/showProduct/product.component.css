@@ -9,7 +9,8 @@
 }
 .product-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
+    margin-right: 50px;
 }
 .product-info { 
   position: relative;

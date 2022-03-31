@@ -1,3 +1,4 @@
+import { PurchaseComponent } from './purchase/purchase.component';
 import { ProductComponent } from './showProduct/product.component';
 import { ProductsComponent } from './showProducts/products.component';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,8 @@ const routes: Routes = [
         { path: 'Products', component: ProductsComponent, pathMatch: 'full' },
         { path: 'Products/:ID', component: ProductComponent},
         { path: '', redirectTo: 'Products', pathMatch: 'full' },
-        { path: 'Cart', component: CartComponent }
+        { path: 'Cart', component: CartComponent },
+        {path: 'Purchase', component: PurchaseComponent}
      ]
     },
 

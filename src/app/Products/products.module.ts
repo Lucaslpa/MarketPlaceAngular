@@ -8,6 +8,7 @@ import { SelectProductComponent } from "./selectProduct/selectProduct.component"
 import {ProductComponent} from './showProduct/product.component'
 import { ProductsComponent } from "./showProducts/products.component";
 import { CartService } from '../services/cart.service';
+import { PurchaseComponent } from './purchase/purchase.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CartService } from '../services/cart.service';
         ProductsComponent,
         SelectProductComponent, 
         ProductsHomeComponent,
-        CartComponent
+        CartComponent, 
+        PurchaseComponent
     ],
     providers: [
         CartService
