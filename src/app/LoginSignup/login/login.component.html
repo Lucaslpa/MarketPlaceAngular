@@ -8,6 +8,6 @@
             <input formControlName="password" type="password" name="senha" />
     </div>
     <button  type="submit" class="Submit-Button" (click)="onLogin($event)"  >Fazer login</button>
-    <a class="navigate" routerLink="/Enter/Signup" >Registrar-se</a>
-    <a class="navigate" routerLink="/" >Voltar</a>
+    <a class="navigate" routerLink="/Enter/Signup" (click)="goToRegister()" >Registrar-se</a>
+    <a class="navigate" [routerLink]="returnURL" >Voltar</a>
 </form>

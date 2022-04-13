@@ -25,7 +25,7 @@
          <input type="password" formControlName="confirmPassword" name="confirmPassword" />
       </div>
  
-    <button class="Submit-Button" type="submit" (click)="pastel($event)" >Registrar conta</button>
-    <a class="navigate" routerLink="/Enter/Login" >Fazer login</a>
-    <a class="navigate" routerLink="/" >Voltar</a>
+    <button class="Submit-Button" type="submit" (click)="signUp($event)" >Registrar conta</button>
+    <a class="navigate" routerLink="/Enter/Login" (click)="goToLogin()">Fazer login</a>
+    <a class="navigate" [routerLink]="returnURL" >Voltar</a>
 </form>

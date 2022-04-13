@@ -11,18 +11,21 @@ import { catchError } from 'rxjs';
     templateUrl: "./login.component.html",
     styleUrls: ["./login.component.css"]
 })
-export class LoginComponent {
-
-    LoginForm = this.fb.group({
+export class LoginComponent  {
+     returnURL  = this.Router.parseUrl(this.Router.url).queryParams['returnUrl'] || '/'
+  
+     LoginForm = this.fb.group({
         login: ['', Validators.required],
         password: ['', Validators.required],
     });
 
     constructor(private fb: FormBuilder, private UserService: UserService, private Router: Router) { }
 
+  
+
     onLogin(event: MouseEvent) { 
         event.preventDefault();
-        const returnURL = this.Router.parseUrl(this.Router.url).queryParams['returnUrl']
+      
        const formIsInvalid = !this.LoginForm.valid
       if(formIsInvalid) {
         Swal.fire({
@@ -36,7 +39,6 @@ export class LoginComponent {
             this.LoginForm.get('login')?.value, 
             this.LoginForm.get('password')?.value
             ).pipe(catchError( err => {
-                console.log('a', err);
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
@@ -45,7 +47,7 @@ export class LoginComponent {
                 return err;
             } )).subscribe(allowedLogin => {
            if(allowedLogin) { 
-                this.Router.navigate([returnURL || '/']).then( () => {
+            this.Router.navigate([this.returnURL]).then( () => {
                     sub.unsubscribe();
                 });
            } else {
@@ -57,5 +59,13 @@ export class LoginComponent {
               }
           }, 
         )
+    }
+
+    goToRegister() { 
+        this.Router.navigate(['/Enter','Signup'], {
+             queryParams: {
+                    returnUrl: this.returnURL
+                }
+        });
     }
 }

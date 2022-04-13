@@ -11,7 +11,7 @@
                    </li>
                     <li>
                         <a (click)="logout()" *ngIf="userName" class="Menu-link" >Sair</a> 
-                        <a  routerLink="/Enter" *ngIf="!userName" class="Menu-link" >Entre</a> 
+                        <a routerLink="/Enter" (click)="goToEnter()" *ngIf="!userName" class="Menu-link" >Entre</a> 
                     </li>
                </ul>
          </nav>

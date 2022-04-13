@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Observable, Subscription } from 'rxjs';
 import { ProductCart } from './../../../models/product';
@@ -13,11 +14,12 @@ import { CartStore } from "src/store/cart.store";
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
-    constructor(  private CartStore: CartStore, ) {}
-
+    constructor(  private CartStore: CartStore, private Router: Router ) {}
+    currentRouterUrl = this.Router.url || ''
     userName = ''
     cartQuantity = 0; 
     sub: Subscription; 
+
     
     ngOnInit(): void {
         this.getCartQuantity()
@@ -43,6 +45,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
                 this.cartQuantity = quantity || 0;
             }
         )
+    }
+    
+    goToEnter() {  
+        this.Router.navigate(['/Enter', 'Login'], {queryParams: {returnUrl: this.Router.url}});
     }
 
     logout = () => {

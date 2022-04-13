@@ -13,7 +13,12 @@ import { catchError } from 'rxjs';
     styleUrls: ["./signup.component.css"]
 })
 export class SignupComponent {
+
+
+    returnURL  = this.Router.parseUrl(this.Router.url).queryParams['returnUrl'] || '/'
+
     registerForm: FormGroup = new FormGroup({});
+
     constructor(private fb: FormBuilder, private UserService: UserService, private Router: Router) {
         this.registerForm =  this.fb.group({
             name: ["", Validators.required],
@@ -24,14 +29,14 @@ export class SignupComponent {
         });
       }  
     
-    pastel(event: MouseEvent) {
+    signUp(event: MouseEvent) {
         event.preventDefault();
-        console.log(this.registerForm.get('confirmPassword')?.errors);
         const formIsInvalid = !this.registerForm.valid
+        const passwordAndConfirmPasswordAreDifferent = this.registerForm.get('password')?.value !== this.registerForm.get('confirmPassword')?.value
+        
         if(formIsInvalid
             || 
-              this.registerForm.get('confirmPassword')?.value
-              !== this.registerForm.get('password')?.value  
+            passwordAndConfirmPasswordAreDifferent  
             ) {
           Swal.fire({
             icon: 'warning',
@@ -62,7 +67,7 @@ export class SignupComponent {
                     title: 'Cadastro realizado com sucesso!',
                     text: 'Você já pode fazer login!',
                     didClose: () => {
-                        this.Router.navigate(['Enter', 'Login']).then(() => { 
+                        this.goToLogin().then(() => { 
                             sub.unsubscribe();
                         })
                     }
@@ -71,4 +76,13 @@ export class SignupComponent {
             },
         )
     }
+
+
+    goToLogin() { 
+           return  this.Router.navigate(['/Enter','Login'], {
+                 queryParams: {
+                        returnUrl: this.returnURL
+                    }
+            });
+        } 
 }
