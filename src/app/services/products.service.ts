@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const API_URL = 'http://localhost:3000/products/';
+const API_URL = 'https://my-json-server.typicode.com/Lucaslpa/marketPlaceFakeServer/products/';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +12,7 @@ export class ProductsService {
 
   Get: Observable<Product[]>  = this.Http.get<Product[]>(API_URL);
 
-  GetOne(id: number) { 
+  GetOne(id: number) {
      return this.Http.get<Product>(API_URL + `${id}`, {
        responseType: 'json'
      });

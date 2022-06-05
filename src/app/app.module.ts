@@ -14,19 +14,20 @@ import {CartStore} from '../store/cart.store'
 @NgModule({
   declarations: [
     AppComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TemplateModule,
-    ProductsModule, 
+    ProductsModule,
     HttpClientModule
   ],
   providers: [
     ProductsService,
-    UserService, 
-    CartStore
+    UserService,
+    CartStore,
+   {provide: 'googleTagManagerId',  useValue: 'GTM-5VH2FLT'}
   ],
   bootstrap: [AppComponent]
 })
